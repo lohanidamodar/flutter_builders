@@ -1,0 +1,14 @@
+{
+    "name":"Container",
+    "params": {
+        "color":"#Color(0xffff0000)",
+        "padding":"#const EdgeInsets.all(16.0)",
+        "child": {
+            "name":"Text",
+            "params":{
+                "0": "Hello flutter builder!",
+                "style":"#TextStyle(color: Color(0xffffffff), fontWeight: FontWeight.bold )"
+            }
+        }
+    }
+}

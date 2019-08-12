@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'example.dart' as example;
 
 void main() => runApp(MyApp());
 
@@ -22,7 +23,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('JSON to Widget Builder'),
       ),
-      body: Container(),
+      body: example.GeneratedWidget(),
     );
   }
 }
