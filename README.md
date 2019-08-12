@@ -1,8 +1,48 @@
-# flutter_builders
+# Flutter JSON to Widget generator
 
-A new Flutter project.
+Automatically generate Widgets from JSON templates using flutter builders.
 
-## Getting Started
+## Example
+- JSON Schema
+    ```json
+    {
+        "name":"Container",
+        "params": {
+            "color":"#Color(0xffff0000)",
+            "padding":"#const EdgeInsets.all(16.0)",
+            "child": {
+                "name":"Text",
+                "params":{
+                    "0": "Hello flutter builder!",
+                    "style":"#TextStyle(color: Color(0xffffffff), fontWeight: FontWeight.bold )"
+                }
+            }
+        }
+    }
+    ```
+- Generated Code
+    ```dart
+    //generated code
+    import 'package:flutter/widgets.dart';
+
+    class GeneratedWidget extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+        return Container(
+        color: Color(0xffff0000),
+        padding: const EdgeInsets.all(16.0),
+        child: Text(
+            "Hello flutter builder!",
+            style: TextStyle(color: Color(0xffffffff), fontWeight: FontWeight.bold),
+        ),
+        );
+    }
+    }
+
+    ```
+
+
+## Getting Started with flutter
 
 This project is a starting point for a Flutter application.
 
